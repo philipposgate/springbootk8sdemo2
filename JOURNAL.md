@@ -4,7 +4,7 @@
 
 In **CHAPTER 2** we'll continue to expand the API's definitions in the kustomize yaml files (aka: the Kubernetes manifest). 
 
-Previously I used kubectl to generate the **deployment.yaml** file, and that file was enough to make a basic deployment.  Now we have to setup the Kustomize yaml files properly.
+In the previous chapter I used kubectl to generate a single **deployment.yaml** file that was enough to make a rudimentary deployment in my local Kubernetes cluster.  This time we'll setup the Kustomize yaml files properly.
 
 The following is an example of how the ```kubernetes``` directory structure should look like...
 
@@ -34,15 +34,10 @@ The following is an example of how the ```kubernetes``` directory structure shou
 
 The only yaml file that's mandatory is the ```kustomization.yaml``` file. It has to be created in the **base** directory, and also in each **overlay** directory.  All the other yaml files are used in reference from the kustomization.yaml file.  
 
-In order to deploy to a particular environment, you execute ```kubectl apply -f <thePathToMyOverlay>```.
+In order to deploy to a particular environment, you would execute ```kubectl apply -f <thePathToOverlayDirectory>```.
 
-e.g. to deploy to "dev"
-```
-$ kubectl apply -f kubernetes/overlays/dev
-```
+e.g. 
 
-e.g. to deploy to "production"
-```
-$ kubectl apply -f kubernetes/overlays/production
-```
+* to deploy to "dev" execute ```kubectl apply -f kubernetes/overlays/dev```
+* to deploy to "production" execute ```kubectl apply -f kubernetes/overlays/production```
 
