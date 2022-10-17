@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: springbootk8sdemo2
+  name: springbootk8sdemo2
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: springbootk8sdemo2
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: springbootk8sdemo2
+    spec:
+      containers:
+      - image: springbootk8sdemo2:0.0.1-SNAPSHOT
+        name: springbootk8sdemo2
+        resources: {}
+status: {}
