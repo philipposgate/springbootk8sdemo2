@@ -2,7 +2,7 @@
 
 ## October 16, 2022 - Philip Posgate
 
-IN **CHAPTER 2** we'll continue to expand the API's definitions in the kustomize yaml files (aka: the Kubernetes manifest). 
+In **CHAPTER 2** we'll continue to expand the API's definitions in the kustomize yaml files (aka: the Kubernetes manifest). 
 
 Previously I used kubectl to generate the **deployment.yaml** file, and that file was enough to make a basic deployment.  Now we have to setup the Kustomize yaml files properly.
 
