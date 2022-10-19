@@ -33,3 +33,10 @@ kubectl -n local-springbootk8sdemo2-ns port-forward springbootk8sdemo2-6466fd495
 
 ...then you should be able to hit the API at http://localhost:8080/actuator
 
+<br>
+
+## TO UNINSTALL
+
+```
+kubectl delete ns local-springbootk8sdemo2-ns
+```
