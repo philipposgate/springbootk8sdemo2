@@ -30,14 +30,14 @@ The following is an example of how the ```kubernetes``` directory structure shou
         └── service-nodeport.yaml
 ```
 
-...so above you have a **base** configuration that defines those configs which are common to all environments.  And then you have environment specific **overlays** which extend or override the base config.
+...so above you have a **base** configuration that defines those configs which are common to all environments.  And then you have environment specific **overlays** which extend and/or override the base config.
 
 The only yaml file that's mandatory is the ```kustomization.yaml``` file. It has to be created in the **base** directory, and also in each **overlay** directory.  All the other yaml files are used in reference from the kustomization.yaml file.  
 
-In order to deploy to a particular environment, you would execute ```kubectl apply -f <thePathToOverlayDirectory>```.
+In order to deploy to a particular environment, you would execute ```kubectl apply -k <thePathToOverlayDirectory>```.
 
 e.g. 
 
-* to deploy to "dev" execute ```kubectl apply -f kubernetes/overlays/dev```
-* to deploy to "production" execute ```kubectl apply -f kubernetes/overlays/production```
+* to deploy to "dev" execute ```kubectl apply -k kubernetes/overlays/dev```
+* to deploy to "production" execute ```kubectl apply -k kubernetes/overlays/production```
 
