@@ -37,6 +37,12 @@ kubectl -n local-springbootk8sdemo2-ns port-forward springbootk8sdemo2-6466fd495
 
 ## TO UNINSTALL
 
+e.g. delete all resources in namespace
+```
+kubectl -n local-springbootk8sdemo2-ns delete all --all
+```
+
+e.g. delete namespace
 ```
 kubectl delete ns local-springbootk8sdemo2-ns
 ```
