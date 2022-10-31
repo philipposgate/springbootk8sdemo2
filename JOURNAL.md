@@ -41,3 +41,23 @@ e.g.
 * to deploy to "dev" execute ```kubectl apply -k kubernetes/overlays/dev```
 * to deploy to "production" execute ```kubectl apply -k kubernetes/overlays/production```
 
+<br>
+
+## October 30, 2022 - Philip Posgate
+
+In CHAPTER 1, we built a docker image with the ```./gradlew bootBuildImage``` command.  This auto-generates a Dockerfile and then builds the Docker image.  In this chapter we change things...this time we add our own **Dockerfile** to the root of the project.  This gives us total control of the Docker image we're building.  But it also means we have to manually build it with:
+
+```
+docker build -t springbootk8sdemo2:0.0.1-SNAPSHOT .
+```
+
+...and then we can run it with:
+
+```
+docker run -p 8080:8080 -t springbootk8sdemo2:0.0.1-SNAPSHOT
+```
+
+e.g.
+![image](doc/dockerrun1.png)
+
+...and now we can hit the API at ```http://localhost:8080/actuator```

@@ -11,7 +11,7 @@ Build and deploy the app with the following commands...
 
 ```
 ./gradlew clean build
-./gradlew bootBuildImage
+docker build -t springbootk8sdemo2:0.0.1-SNAPSHOT .
 kubectl create ns local-springbootk8sdemo2-ns
 kubectl apply -k kubernetes/overlays/local
 ```
