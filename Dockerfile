@@ -1,5 +1,5 @@
 # 
-# Using the "eclipse-temurin" as the base image.
+# Using "eclipse-temurin JDK11" as the base image.
 # See: https://registry.hub.docker.com/_/eclipse-temurin
 # 
 FROM eclipse-temurin:11
